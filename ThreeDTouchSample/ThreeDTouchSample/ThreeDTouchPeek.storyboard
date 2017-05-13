@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ThreeD Touch Peek View Controller-->
+        <scene sceneID="GDf-yQ-53H">
+            <objects>
+                <viewController storyboardIdentifier="ThreeDTouchPeek" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2tB-6m-oQM" customClass="ThreeDTouchPeekViewController" customModule="ThreeDTouchSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4RH-iE-lxS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fyb-Vs-sAc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3ko-hh-ShZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNk-LA-tfG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVO-nI-kRK">
+                                        <rect key="frame" x="20" y="40" width="335" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="eo8-nQ-V8o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.41176470590000003" green="0.73333333329999995" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OVO-nI-kRK" secondAttribute="trailing" constant="20" id="4Bz-cp-0RK"/>
+                                    <constraint firstItem="OVO-nI-kRK" firstAttribute="leading" secondItem="jNk-LA-tfG" secondAttribute="leading" constant="20" id="589-NS-Iij"/>
+                                    <constraint firstAttribute="height" constant="200" id="Rak-dY-Ne9"/>
+                                    <constraint firstItem="OVO-nI-kRK" firstAttribute="top" secondItem="jNk-LA-tfG" secondAttribute="top" constant="40" id="oy0-zY-BFD"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF3-gL-zVt">
+                                <rect key="frame" x="157" y="230" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="e3Y-ix-rXE"/>
+                                    <constraint firstAttribute="height" constant="30" id="i2v-J7-0vm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="tapCloseBtn:" destination="2tB-6m-oQM" eventType="touchUpInside" id="19M-so-Fi4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jNk-LA-tfG" firstAttribute="top" secondItem="3ko-hh-ShZ" secondAttribute="top" id="6U9-tk-nO0"/>
+                            <constraint firstItem="MF3-gL-zVt" firstAttribute="centerX" secondItem="3ko-hh-ShZ" secondAttribute="centerX" id="Dig-na-aaM"/>
+                            <constraint firstAttribute="trailing" secondItem="jNk-LA-tfG" secondAttribute="trailing" id="N0a-9U-01y"/>
+                            <constraint firstItem="jNk-LA-tfG" firstAttribute="leading" secondItem="3ko-hh-ShZ" secondAttribute="leading" id="rJ1-N6-A8y"/>
+                            <constraint firstItem="MF3-gL-zVt" firstAttribute="top" secondItem="jNk-LA-tfG" secondAttribute="bottom" constant="30" id="ytI-0J-c4Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTitle" destination="OVO-nI-kRK" id="p28-7C-94f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7lM-5h-h2l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.8" y="222.63868065967017"/>
+        </scene>
+    </scenes>
+</document>

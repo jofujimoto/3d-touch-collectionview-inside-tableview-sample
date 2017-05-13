@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ThreeDTouchSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="257" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LHh-I9-S5w">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableCell" rowHeight="257" id="U3c-ZR-TtH" customClass="CustomTableCell" customModule="ThreeDTouchSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="257"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U3c-ZR-TtH" id="YjO-Wj-Ztr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="256.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6nL-R1-QE4">
+                                                    <rect key="frame" x="10" y="50" width="355" height="206.5"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jIc-5K-iyF">
+                                                        <size key="itemSize" width="147" height="181"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CustomCollectionCell" reuseIdentifier="CustomCollectionCell" id="2RI-bX-Q0A" customClass="CustomCollectionCell" customModule="ThreeDTouchSample" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="13" width="147" height="181"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="147" height="181"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="VKi-1K-7Sq">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="147" height="181"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="VKi-1K-7Sq" secondAttribute="trailing" id="I5S-Ju-q7H"/>
+                                                                <constraint firstItem="VKi-1K-7Sq" firstAttribute="leading" secondItem="2RI-bX-Q0A" secondAttribute="leading" id="XeQ-0C-ozb"/>
+                                                                <constraint firstItem="VKi-1K-7Sq" firstAttribute="top" secondItem="2RI-bX-Q0A" secondAttribute="top" id="Xzw-ZC-jeD"/>
+                                                                <constraint firstAttribute="bottom" secondItem="VKi-1K-7Sq" secondAttribute="bottom" id="xgR-ir-XoE"/>
+                                                            </constraints>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="U3c-ZR-TtH" id="qJy-FB-6oi"/>
+                                                        <outlet property="delegate" destination="U3c-ZR-TtH" id="yiD-F3-PC0"/>
+                                                    </connections>
+                                                </collectionView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oP-nK-7eM">
+                                                    <rect key="frame" x="20" y="20" width="335" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="3kU-4v-a18"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6nL-R1-QE4" firstAttribute="leading" secondItem="YjO-Wj-Ztr" secondAttribute="leading" constant="10" id="71X-uA-paf"/>
+                                                <constraint firstAttribute="trailing" secondItem="6nL-R1-QE4" secondAttribute="trailing" constant="10" id="LED-9l-e4c"/>
+                                                <constraint firstAttribute="bottom" secondItem="6nL-R1-QE4" secondAttribute="bottom" id="VQ9-i0-Eox"/>
+                                                <constraint firstItem="6nL-R1-QE4" firstAttribute="top" secondItem="7oP-nK-7eM" secondAttribute="bottom" constant="10" id="ntq-5B-LyI"/>
+                                                <constraint firstItem="7oP-nK-7eM" firstAttribute="leading" secondItem="YjO-Wj-Ztr" secondAttribute="leading" constant="20" id="pwh-47-HIt"/>
+                                                <constraint firstAttribute="trailing" secondItem="7oP-nK-7eM" secondAttribute="trailing" constant="20" id="r3t-HM-6SF"/>
+                                                <constraint firstItem="7oP-nK-7eM" firstAttribute="top" secondItem="YjO-Wj-Ztr" secondAttribute="top" constant="20" id="yLn-k5-flC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="6nL-R1-QE4" id="Qj6-Rz-Ogh"/>
+                                            <outlet property="lblTitle" destination="7oP-nK-7eM" id="U1d-wA-aXz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="R8w-c9-XTk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="E5Q-h9-spi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LHh-I9-S5w" secondAttribute="bottom" id="KH6-dW-mG1"/>
+                            <constraint firstItem="LHh-I9-S5w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UHK-6U-uae"/>
+                            <constraint firstAttribute="trailing" secondItem="LHh-I9-S5w" secondAttribute="trailing" id="g2q-D5-h3a"/>
+                            <constraint firstItem="LHh-I9-S5w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vwn-pO-jz3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblBase" destination="LHh-I9-S5w" id="LrH-8f-1Om"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sample" width="638" height="700"/>
+    </resources>
+</document>
